@@ -1,0 +1,54 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:layout_margin="4dp"
+    android:background="@color/itemBack">
+
+    <TextView
+        android:id="@+id/TXT_tableNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="table number"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/TXT_capacity"
+        android:layout_below="@+id/TXT_tableNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="capacity"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        android:paddingBottom="4dp"/>
+
+    <TextView
+        android:id="@+id/TXT_locationDesc"
+        android:layout_below="@+id/TXT_capacity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="description"
+        android:textColor="#626262"
+        android:textSize="12sp"
+        android:paddingBottom="4dp"/>
+
+    <Button
+        android:id="@+id/BTN_reserve"
+        android:layout_below="@+id/TXT_locationDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reserve"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:backgroundTint="@color/button"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:layout_marginStart="8dp"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_below="@id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/LBL_username"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Username:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:paddingEnd="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_username"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="My Name"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:backgroundTint="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/LBL_email"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Email:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:paddingEnd="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_email"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="example@example.example"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:backgroundTint="#000000"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <TextView
+                android:id="@+id/LBL_avatar"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Avatar?"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:gravity="end"
+                android:paddingEnd="8dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_avatar"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="bla bla"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:backgroundTint="#000000"/>
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/radio_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="8dp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/adminRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Admin"
+                android:textColor="#000000"
+                android:textSize="18sp"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/superRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Superapp"
+                android:textColor="#000000"
+                android:textSize="18sp"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/miniRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Miniapp"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:checked="true"/>
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/BTN_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:backgroundTint="@color/button"
+            android:paddingVertical="12dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</RelativeLayout>

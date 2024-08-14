@@ -1,0 +1,152 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back"
+    android:padding="16dp">
+
+    <!-- Title TextView -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reservation Details"
+        android:textColor="#240D07"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:shadowColor="#000000"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="3"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- People Count Layout -->
+    <LinearLayout
+        android:id="@+id/peopleCountLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/descriptionTextView"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="People count:"
+            android:layout_gravity="center_vertical"
+            android:paddingEnd="8dp"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TXT_people_count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Enter count"
+            android:text="2"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <!-- Day of Week Layout -->
+    <LinearLayout
+        android:id="@+id/dayOfWeekLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/peopleCountLayout"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Day of the Week:"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_day_of_week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"/>
+    </LinearLayout>
+
+    <!-- Time of Day Layout -->
+    <LinearLayout
+        android:id="@+id/timeOfDayLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/dayOfWeekLayout"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Time of the Day:"
+            android:paddingBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_time_of_day"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/spinner_background"/>
+    </LinearLayout>
+
+    <!-- RecyclerView for Tables -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTables"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/descriptionTextView"
+        android:layout_above="@id/LBL_success"
+        android:visibility="gone"/>
+
+    <!-- Success Message -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/LBL_success"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/black"
+        android:layout_above="@id/buttonLayout"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"/>
+
+    <!-- Button Layout -->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="16dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BTN_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button"
+            android:text="Back"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BTN_complete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/button"
+            android:text="Complete"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/BTN_revert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Revert"
+            android:backgroundTint="@color/button"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+</RelativeLayout>
