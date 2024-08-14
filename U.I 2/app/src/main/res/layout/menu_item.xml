@@ -1,0 +1,139 @@
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:background="@color/back">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_placeholder"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/TXT_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dish Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/TXT_imgUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Image URL"
+                android:textSize="6sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/TXT_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Category"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/TXT_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/TXT_allergens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Allergens"
+                android:textColor="#626262"
+                android:textSize="12sp"
+                android:paddingBottom="4dp"/>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:text="₪"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="center"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/TXT_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Price"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="start"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/BTN_update"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Update"
+            android:backgroundTint="@color/button"
+            android:textColor="@color/white"
+
+            android:textSize="16sp"
+            />
+
+        <Button
+            android:id="@+id/BTN_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Delete"
+            android:backgroundTint="@color/button"
+            android:textColor="@color/white"
+
+            android:textSize="16sp"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,221 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/back">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New Item"
+        android:textColor="@color/text"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:shadowColor="@color/text"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintBottom_toTopOf="@id/buttonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Dish Name -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/nameTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dish Name:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dish Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <!-- Image URL -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/imgUrlTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image URL:"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_imgUrl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="URL"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text"
+                android:paddingTop="8dp"
+                android:paddingBottom="4dp"/>
+
+            <!-- Load Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/BTN_load_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Load"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/button"
+                android:gravity="center"/>
+
+            <!-- Image View -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_placeholder"/>
+
+            <!-- Category -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/categoryTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Category:"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Main"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <!-- Description -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/descriptionTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Description:"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Description of the dish goes here. It can be a bit longer to test multiline text wrapping."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                android:paddingBottom="4dp"/>
+
+            <!-- Allergens -->
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/allergensTextView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Allergens:"
+                android:textColor="#626262"
+                android:textSize="12sp"
+                android:paddingBottom="4dp"/>
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/TXT_allergens"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="something, something else"
+                android:textColor="#626262"
+                android:textSize="12sp"
+                android:paddingBottom="4dp"/>
+
+            <!-- Price -->
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="0.2"
+                    android:layout_height="wrap_content"
+                    android:text="₪"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="center"/>
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/TXT_price"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="12.9"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:gravity="start"/>
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Buttons -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/scrollView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BTN_back"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Back"
+            android:backgroundTint="@color/button"
+            app:autoSizeTextType="uniform"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/BTN_save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Save"
+            android:backgroundTint="@color/button"
+            app:autoSizeTextType="uniform"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
